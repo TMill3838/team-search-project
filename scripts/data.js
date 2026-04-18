@@ -1,2 +1,26 @@
-
+[
+  { "shortcut": "Alt + Z", "description": "Wrap around current line of code", "tool": "VS Code", "author": "Poppy Dalton" },
+  { "shortcut": "Ctrl + S", "description": "Save current file", "tool": "VS Code", "author": "Anna Patillo" },
+  { "shortcut": "Ctrl + /", "description": "Comment Code", "tool": "VS Code", "author": "Shion Kishaba" },
+  { "shortcut": "Ctrl + P", "description": "Paste", "tool": "System", "author": "Carina Estrada" },
+  { "shortcut": "Win + Printscreen", "description": "Screenshot all screens", "tool": "Windows", "author": "Jasmine Morgan" },
+  { "shortcut": "Ctrl + C", "description": "Copy", "tool": "System", "author": "Anthony Guerrero" },
+  { "shortcut": "Ctrl + Z", "description": "Undo", "tool": "System", "author": "AJ Ramsden" },
+  { "shortcut": "Ctrl + Shift + K", "description": "Replace", "tool": "VS Code", "author": "Garett Clark" },
+  { "shortcut": "Ctrl + H", "description": "Delete Line", "tool": "VS Code", "author": "Christian Miller" },
+  { "shortcut": "Ctrl + A", "description": "Highlights all text", "tool": "System", "author": "Stephen Ruelas" },
+  { "shortcut": "Ctrl + F", "description": "Find in document", "tool": "System", "author": "Wansheng Wu" },
+  { "shortcut": "Ctrl + T", "description": "Add a new tab", "tool": "Browser", "author": "Isabella O’Rear" },
+  { "shortcut": "Alt + Tab", "description": "Switch between tabs", "tool": "Windows", "author": "Tylan Miller" },
+  { "shortcut": "Alt + F4", "description": "Close active window", "tool": "Windows", "author": "Nang Khin La Pyae" },
+  { "shortcut": "Win + Shift + F", "description": "Take a screenshot", "tool": "Windows", "author": "Maddox Dorning" },
+  { "shortcut": "Ctrl + Shift + Tab", "description": "Backward on windows", "tool": "Windows", "author": "Mitchell Chaffee" },
+  { "shortcut": "Win + .", "description": "Special Characters", "tool": "Windows", "author": "Reid Kuhlers" },
+  { "shortcut": "Alt + Shift + F", "description": "Formatting", "tool": "VS Code", "author": "Thomas Brakefield" },
+  { "shortcut": "Ctrl + Shift + Esc", "description": "Open task manager", "tool": "Windows", "author": "Brody Hilliard" },
+  { "shortcut": "Shift + Alt + F", "description": "Format document", "tool": "VS Code", "author": "Hassan Alnabres" },
+  { "shortcut": "Ctrl + Alt + Del", "description": "Open sign out menu", "tool": "Windows", "author": "Sean Clary" },
+  { "shortcut": "Shift + Opt + S", "description": "Create getters/setters", "tool": "Eclipse", "author": "Eric Staggs" },
+  { "shortcut": "Ctrl + R", "description": "Refresh Page", "tool": "Browser", "author": "Griffin Turner" }
+]
  
