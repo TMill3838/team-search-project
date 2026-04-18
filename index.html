@@ -1,1 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Retro Shortcut Finder</title>
+    <link rel="stylesheet" href="styles/retro-style.css">
+</head>
+<body>
+    <header>
+        <h1>⌨️ KEYBOARD SHORTCUTS</h1>
+        <p>A project by Tylan Miller & Isabella O'Rear</p>
+    </header>
 
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search by description...">
+        
+        <select id="toolFilter">
+            <option value="all">All Tools</option>
+            <option value="VS Code">VS Code</option>
+            <option value="Windows">Windows</option>
+            <option value="Browser">Browser</option>
+            <option value="System">System</option>
+            <option value="Eclipse">Eclipse</option>
+        </select>
+    </div>
+
+    <main id="shortcutList" class="grid-container"></main>
+
+    <script src="scripts/search.js"></script>
+</body>
+</html>
