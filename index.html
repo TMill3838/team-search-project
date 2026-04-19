@@ -12,20 +12,27 @@
     </header>
 
     <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search by description...">
-        
+        <input type="text" id="searchInput" placeholder="Search by name or shortcut...">
+        <button id="searchButton">Go</button>
+
         <select id="toolFilter">
             <option value="all">All Tools</option>
-            <option value="VS Code">VS Code</option>
-            <option value="Windows">Windows</option>
-            <option value="Browser">Browser</option>
-            <option value="System">System</option>
-            <option value="Eclipse">Eclipse</option>
+            <option value="author">Author</option>
+            <option value="shortcut">Shortcut</option>
+        </select>
+
+        <select id="sortSelect">
+            <option value="">-- Sort By --</option>
+            <option value="author">Author Name (A-Z)</option>
+            <option value="shortcut">Shortcut (A-Z)</option>
         </select>
     </div>
 
     <main id="shortcutList" class="grid-container"></main>
+    <p id="searchMessage"></p>
 
-    <script src="scripts/search.js"></script>
+    <script type="module" src="scripts/data.js"></script>
+    <script type="module" src="scripts/search.js"></script>
+    <script type="module" src="scripts/sort.js"></script>
 </body>
 </html>
