@@ -1,60 +1,31 @@
-const DATA_PATH = 'scripts/data.js';
-let shortcuts = [];
+import { shortcuts, getData } from "./data.js";
 
-//loading the data
-async function init() {
-    try {
-        const response = await fetch(DATA_PATH);
-        shortcuts = await response.json();
-        
-        // Sort by shortcut keys (A-Z) initially
-        renderData(sortShortcuts(shortcuts));
-    } catch (err) {
-        console.error("Failed to load shortcuts:", err);
-    }
+await getData();
+
+function renderResults(items) {
+  const list = document.querySelector("#shortcutList");
+
+  if (items.length === 0) {
+    list.innerHTML = "<p>No results found.</p>";
+    return;
+  }
+
+  list.innerHTML = items.map(item => `
+    <div class="shortcut-card">
+      <h2>${item.shortcut}</h2>
+      <p>${item.description}</p>
+      <p>${item.author}</p>
+    </div>
+  `).join("");
 }
 
-// sorting
-function sortShortcuts(data) {
-    return data.sort((a, b) => a.shortcut.localeCompare(b.shortcut));
-}
+document.querySelector("#searchInput").addEventListener("input", (e) => {
+  const q = e.target.value.toLowerCase().trim();
 
-// rendering
-function renderData(data) {
-    const list = document.getElementById('shortcutList');
-    list.innerHTML = '';
+  const results = shortcuts.filter(item =>
+    item.author.toLowerCase().includes(q) ||
+    item.shortcut.toLowerCase().includes(q)
+  );
 
-    data.forEach(item => {
-        const card = document.createElement('div');
-        card.className = 'retro-card';
-        card.innerHTML = `
-            <kbd>${item.shortcut}</kbd>
-            <h3>${item.description}</h3>
-            <div class="meta">
-                <span class="tool">${item.tool}</span>
-                <span class="author">By: ${item.author}</span>
-            </div>
-        `;
-        list.appendChild(card);
-    });
-}
-
-// filtering
-function handleFilter() {
-    const searchVal = document.getElementById('searchInput').value.toLowerCase();
-    const toolVal = document.getElementById('toolFilter').value;
-
-    const filtered = shortcuts.filter(item => {
-        const matchesSearch = item.description.toLowerCase().includes(searchVal);
-        const matchesTool = toolVal === 'all' || item.tool === toolVal;
-        return matchesSearch && matchesTool;
-    });
-
-    renderData(sortShortcuts(filtered));
-}
-
-
-document.getElementById('searchInput').addEventListener('input', handleFilter);
-document.getElementById('toolFilter').addEventListener('change', handleFilter);
-
-init();
+  renderResults(results);
+});
