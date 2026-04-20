@@ -1,6 +1,6 @@
 # 🛸 WARP GATE
 
-## A keyboard shortcut search and filter engine with a retro aesthetic.
+## A keyboard shortcut search and filter engine with a retro gaming aesthetic.
 
 This app helps users find the best shortcuts for VS Code, Windows, and more. Built for CIS-376.
 
