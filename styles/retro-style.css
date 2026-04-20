@@ -1,1 +1,75 @@
+body {
+    font-family: "Sixtyfour", sans-serif;
+    color:red;
+    background-image: url(../assets/8bit-plain-space-bg.jpg);
+}
 
+
+.title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 40vh; 
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+    font-size: 3rem;
+}
+
+
+.search-section {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 800px;
+    margin-top: 20px;
+}
+
+.input-wrapper {
+    flex-grow: 2; 
+}
+
+#searchInput {
+    color: aqua;
+    background-color: rgba(0, 0, 139, 0);
+
+    width: 90%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid aqua;
+    border-color: aqua;
+    font-family: "Sixtyfour", sans-serif;
+}
+
+.filter-dropdown {
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Sixtyfour", sans-serif;
+    border-color: aqua;
+
+    color: aqua;
+    background-color: rgba(255, 127, 80, 0);
+}
+
+#shortcutList {
+    color: aqua;
+    display: grid;
+    
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    
+    width: 90%;          
+    max-width: 1200px;   
+    margin: 40px auto;   
+    
+    justify-content: center; 
+    align-content: start;    
+}

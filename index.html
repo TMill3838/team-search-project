@@ -1,38 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Retro Shortcut Finder</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=Orbitron:wght@400..900&family=Sixtyfour&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="styles/retro-style.css">
 </head>
+
 <body>
+   <div class="title">
     <header>
-        <h1> KEYBOARD SHORTCUTS</h1>
-        <p>A project by Isabella, Tylan & Nang</p>
+        <h1>Warp Gate</h1>
+        <p>A project by Isabella, Tylan, & Nang</p>
     </header>
 
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Search by name or shortcut...">
-        <button id="searchButton">Go</button>
-
-        <select id="toolFilter">
+    <div class="search-section">
+        <select id="toolFilter" class="filter-dropdown">
             <option value="all">All Tools</option>
             <option value="author">Author</option>
             <option value="shortcut">Shortcut</option>
         </select>
 
-        <select id="sortSelect">
+        <div class="input-wrapper">
+            <input type="text" id="searchInput" placeholder="Search name or shortcut">
+        </div>
+
+        <select id="sortSelect" class="filter-dropdown">
             <option value="">-- Sort By --</option>
             <option value="author">Author Name (A-Z)</option>
             <option value="shortcut">Shortcut (A-Z)</option>
         </select>
     </div>
+</div>
 
-    <main id="shortcutList" class="grid-container"></main>
-    <p id="searchMessage"></p>
+<main id="shortcutList" class="grid-container"></main>
+<p id="searchMessage"></p>
 
-    <script type="module" src="scripts/data.js"></script>
-    <script type="module" src="scripts/search.js"></script>
-    <script type="module" src="scripts/sort.js"></script>
+
+
+        <script type="module" src="scripts/data.js"></script>
+        <script type="module" src="scripts/search.js"></script>
+        <script type="module" src="scripts/sort.js"></script>
 </body>
+
 </html>
